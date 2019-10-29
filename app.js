@@ -17,7 +17,7 @@ var userController = require('./controller/userController');
 
 var app = express();
 
-mongoose.connect('localhost:27017/shopping');
+mongoose.connect('mongodb+srv://deploy:mrsrp96@cluster0-rxgkc.mongodb.net/test?retryWrites=true&w=majority');
 require('./config/passport');
 
 // view engine setup
