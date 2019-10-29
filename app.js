@@ -12,8 +12,8 @@ var flash = require('connect-flash');
 var validator = require('express-validator');
 var MongoStore = require('connect-mongo')(session);
 
-var routes = require('./routes/index');
-var userRoutes = require('./routes/user');
+var controller = require('./controller/productController');
+var userController = require('./controller/userController');
 
 var app = express();
 
@@ -49,8 +49,8 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use('/user', userRoutes);
-app.use('/', routes);
+app.use('/userController', userController);
+app.use('/', controller);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
