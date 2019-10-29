@@ -100,9 +100,8 @@ router.post('/registered-product', isLoggedIn, function (req, res, next) {
         var produto = req.body;
         var transaction = new Product(produto);
         transaction.save();
-
-        console.log("TesteEEEEEEE");    
-        return res.redirect('/sucess-product');
+            
+        return res.redirect('/');
         }
     });
 

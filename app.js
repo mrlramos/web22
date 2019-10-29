@@ -49,7 +49,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use('/userController', userController);
+app.use('/user', userController);
 app.use('/', controller);
 
 // catch 404 and forward to error handler
